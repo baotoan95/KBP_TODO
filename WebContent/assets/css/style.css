@@ -3,7 +3,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -40,6 +40,9 @@ body {
 	padding: 0px 10px;
 }
 
+#main-menu {
+}
+
 #main-menu .navbar-brand {
 	padding: 5px 15px;
 }
@@ -53,6 +56,9 @@ body {
 
 #action-menu .navbar-brand {
 	color: white;
+	padding: 5px 15px;
+	height: auto;
+	line-height: normal;
 }
 
 #action-menu {
@@ -66,14 +72,15 @@ body {
 
 .kb-col {
 	border: 1px solid #eee;
-	width: 19%;
+	width: 19.5%;
 	list-style-type: none;
 	padding: 5px 0 0 0;
 	float: left;
 	margin: 20px 0px;
-	margin-left: .83%;
+	margin-left: .43%;
 	background-color: #E2E4E6;
 	border-radius: 3px;
+	min-width: 200px;
 }
 
 .kb-col .kb-col-header {
@@ -83,27 +90,26 @@ body {
 	font-weight: bold;
 }
 
+.kb-col .kb-col-header strong {
+	font-size: 20px !important;
+}
+
 .kb-col .kb-col-header .glyphicon {
 	vertical-align: middle;
 	float: right;
 	padding: 5px;
 	font-size: 10px;
-	border-radius: 3px;
-}
-
-.kb-col .kb-col-header .glyphicon:hover {
-	background-color: gray;
-	cursor: pointer;
 }
 
 .kb-col .kb-col-body {
 	list-style: none;
 	padding: 0px;
-	height: 300px;
+	min-height: 10px;
+	max-height: 350px;
 	overflow: auto;
 }
 
-.kb-col .kb-col-body li {
+.kb-col .kb-col-body .kb-item {
 	margin: 0 5px 5px 5px;
 	padding: 5px;
 	font-size: 1.2em;
@@ -114,7 +120,7 @@ body {
 	cursor: pointer;
 }
 
-.kb-col .kb-col-body li:hover {
+.kb-col .kb-col-body .kb-item:hover {
 	background-color: #e2b606;
 }
 
@@ -130,9 +136,45 @@ body {
 	background-color: #CDD2D4;
 }
 
+.kb-item {
+	font-size: 1em;
+}
+
+.kb-item .kb-item-title h4 {
+	font-size: 15px !important;
+	font-weight: bold !important;
+	margin-top: 0px !important;
+}
+
+.kb-item .kb-item-detail .progress {
+	height: 15px;
+	margin-bottom: 5px;
+}
+
+.kb-item .kb-item-detail .progress .progress-bar {
+	color: white;
+	font-size: .6em;
+	line-height: 15px;
+}
+
+.kb-item .kb-item-detail .badges ul {
+	padding: 0px;
+	list-style: none;
+}
+
+.kb-item .kb-item-detail .badges ul > li {
+	display: inline-block;
+	font-size: 10px;
+	background-color: #EC9488;
+	border-radius: 2px;
+	padding: 2px 3px;
+}
+
 .ui-state-highlight {
 	background-color: #CDD2D4 !important;
 	box-shadow: inset 0px 0px 2px #999999 !important;
+	margin: 5px;
+	border-radius: 2px;
 }
 
 .clear {
