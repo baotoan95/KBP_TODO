@@ -9,6 +9,9 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script src="https://use.fontawesome.com/f324b1110f.js"></script>
+<link src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -110,17 +113,14 @@
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="bs-example-navbar-collapse-1"
 					aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span> 
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					Activities
 				</button>
 				<strong class="navbar-brand">Kanban board name</strong>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Activities</a></li>
+					<li><a class="btn btn-default"  href="#">Activities</a></li>
 				</ul>
 			</div>
 		</div>
@@ -128,23 +128,173 @@
 	</div>
 
 	<div id="main-board" class="container-fluid">
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal fade" id="task-detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  	<div class="modal-dialog" role="document">
 		    	<div class="modal-content">
 		      		<div class="modal-header">
 			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			        	<h4 class="modal-title" id="myModalLabel">Xem phim</h4>
-		      		</div>
+			        	<span>in list Prepare</span>
+			        </div>
 			      	<div class="modal-body">
-			        	...
-			      	</div>
-			      	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        	<button type="button" class="btn btn-primary">Save changes</button>
+			      		<div id="task-details" class="col-md-9">
+				        	<div class="badges">
+								<ul>
+									<li><i class="glyphicon glyphicon-time"></i> Feb 22 </li>
+									<li><i class="glyphicon glyphicon-comment"></i> 22 </li>
+									<li><i class="glyphicon glyphicon-flag"></i></li>
+									<li><i class="glyphicon glyphicon-time"></i> Feb 22 </li>
+								</ul>
+							</div>
+							
+							<div id="desc-box">
+								<h3><i class="glyphicon glyphicon-hand-up"></i> Description</h3>
+								<textarea style="width:100%; height: 60px; resize: none;">Description</textarea>
+							</div>
+						
+							<div class="check-list">
+								<h3><i class="glyphicon glyphicon-check"></i> Check List</h3>
+								<div class="progress">
+								  	<div class="progress-bar" role="progressbar" 
+								  	aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								    	60%
+								  	</div>
+								</div>
+								<ul class="check-list-boby">
+									<li class="check-list-item checkbox">
+										<label><input type="checkbox"> Mini task 1</label>
+									</li>
+									<li class="check-list-item checkbox">
+										<label><input type="checkbox"> Mini task 2</label>
+									</li>
+									<li class="check-list-item checkbox">
+										<label><input type="checkbox"> Mini task 3</label>
+									</li>
+									<li class="check-list-item checkbox">
+										<label><input type="checkbox"> Mini task 4</label>
+									</li>
+									<li class="check-list-item checkbox">
+										<label><input type="checkbox"> Mini task 5</label>
+									</li>
+								</ul>
+							</div>
+						
+							<div class="comment-box">
+								<h3><i class="glyphicon glyphicon-comment"></i> Leave a comment</h3>
+								<textarea style="width:100%; height: 60px; resize: none;">Comment something</textarea>
+							</div>
+						
+							<div class="activities">
+								<h3><i class="glyphicon glyphicon-list-alt"></i> Activities</h3>
+								<ul class="activity-list">
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+									
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+									
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+									
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+									
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+									
+									<li class="activity-item">
+										<div class="avatar"><i class="glyphicon glyphicon-user"></i></div>
+										<div class="activity-desc">
+											<span>Toan</span>
+										</div>
+										<div class="clear"></div>
+										<div class="activity-content">
+											This is my comment on your task
+										</div>
+										<div class="activity-actions">
+											<a href="#">Edit</a> - <a href="#">Delete</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+			      		</div>
+			      	
+				      	<div id="task-actions-bar" class="col-md-3">
+				      		<div class="task-action-group">
+				      			<h3>Add</h3>
+				      			<button class="btn btn-default"><i class="fa fa-users"></i> Members</button>
+				      			<button class="btn btn-default"><i class="glyphicon glyphicon-tags"></i> Labels</button>
+				      			<button class="btn btn-default"><i class="glyphicon glyphicon-paperclip"></i> Attachments</button>
+				      		</div>
+				      		
+				      		<div class="task-action-group">
+				      			<h3>Actions</h3>
+				      			<button class="btn btn-default"><i class="glyphicon glyphicon-arrow-right"></i> Move</button>
+				      			<button class="btn btn-default"><i class="glyphicon glyphicon-copy"></i> Copy</button>
+				      		</div>
+				      	</div>
+				      	<div class="clear"></div>
 			      	</div>
 		    	</div>
 		  	</div>
 		</div>
+		
+		<!-- Columns -->
 		<div class="kb-col">
 			<div class="kb-col-header">
 				<strong class="pull-left">Prepare</strong>
@@ -163,7 +313,7 @@
 				<div class="clear"></div>
 			</div>
 			<ul class="kb-col-body sortable connectedSortable">
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -185,7 +335,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -207,7 +357,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -251,7 +401,7 @@
 				<div class="clear"></div>
 			</div>
 			<ul class="kb-col-body sortable connectedSortable">
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -273,7 +423,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -295,7 +445,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -317,7 +467,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -339,7 +489,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -383,7 +533,7 @@
 				<div class="clear"></div>
 			</div>
 			<ul class="kb-col-body sortable connectedSortable">
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -405,7 +555,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -427,7 +577,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -449,7 +599,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -471,7 +621,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -515,7 +665,7 @@
 				<div class="clear"></div>
 			</div>
 			<ul class="kb-col-body sortable connectedSortable">
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -537,7 +687,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -559,7 +709,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -581,7 +731,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -603,7 +753,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -647,7 +797,7 @@
 				<div class="clear"></div>
 			</div>
 			<ul class="kb-col-body sortable connectedSortable">
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -669,7 +819,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -691,7 +841,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -713,7 +863,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -735,7 +885,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="kb-item" data-toggle="modal" data-target="#myModal">
+				<li class="kb-item" data-toggle="modal" data-target="#task-detail-modal">
 					<div class="kb-item-title">
 						<h4>Xem phim</h4>
 					</div>
@@ -760,8 +910,7 @@
 			</ul>
 			<div class="kb-col-footer">Add a new card...</div>
 		</div>
-
-		<div class="clear"></div>
+		<!-- /colunms -->
 	</div>
 <!-- 	<footer style="background-color: white; padding: 5px; position: fixed; bottom: 0px; width: 100%;"> -->
 <!-- 		Copyright &copy; 2017 -->
@@ -810,6 +959,17 @@
 			$(ui.draggable).css('transform', 'rotate(0deg)');
 			ui.helper.css('box-shadow', '0px 1px 2px #999999');
 		}
+		
+		// Archor action bar
+		$("#task-detail-modal").scroll(function() {
+			console.log($('#task-actions-bar').scrollTop());
+			if($('#task-actions-bar').offset().top - $('#task-actions-bar').scrollTop() == 0) {
+				console.log('abc');
+				$('#task-actions-bar').css({'position':'fixed', 'top':'0px'});
+			} else {
+				$('#task-actions-bar').css('position', 'block');
+			}
+		});
 	});
 </script>
 

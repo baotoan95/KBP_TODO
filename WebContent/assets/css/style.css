@@ -2,8 +2,8 @@ body {
 	background-color: #109653;
 }
 
-::-webkit-scrollbar {
-	width: 8px;
+::-webkit-scrollbar, ::-moz-scrollbar {
+	width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,15 +72,35 @@ body {
 
 .kb-col {
 	border: 1px solid #eee;
-	width: 19.5%;
+/* 	width: 19.5%; */
 	list-style-type: none;
 	padding: 5px 0 0 0;
 	float: left;
 	margin: 20px 0px;
-	margin-left: .43%;
+	margin-left: .4%;
 	background-color: #E2E4E6;
 	border-radius: 3px;
-	min-width: 200px;
+}
+
+@media (min-width: 768px){
+    .kb-col {
+        width: 19.5%;
+    }
+}
+@media (min-width: 1200px) {
+    .kb-col {
+        width: 19.5%;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .kb-col {
+        width: 19.5%;
+    }
+}
+@media (max-width: 510px) {
+    .kb-col {
+        width: 100%;
+    }
 }
 
 .kb-col .kb-col-header {
@@ -180,3 +200,84 @@ body {
 .clear {
 	clear: both;
 }
+
+#task-detail-modal .modal-dialog {
+/* 	width: 800px; */
+}
+
+#task-detail-modal #task-details {
+	padding-left: 0px;
+}
+
+#task-details .badges ul {
+	list-style: none;
+	border: 1px solid red;
+}
+
+#task-details .badges ul li {
+	margin: 0px auto;
+	display: inline-block;
+	padding: 0px 10px;
+	border-right: 1px solid black;
+}
+
+#task-details .check-list-boby {
+	list-style: none;
+	padding: 0px;
+}
+
+#task-details .check-list-boby .check-list-item {
+	
+}
+
+.activities .activity-list {
+	list-style: none;
+	max-height: 300px;
+	overflow: auto;
+}
+
+.activities .activity-list .activity-item {
+	border-left: 2px dashed black;
+	padding: 0px 5px;
+	margin-bottom: 10px;
+}
+
+.activities .activity-list .activity-item .avatar {
+	width: 30px;
+	height: 30px;
+	margin-left: -30px;
+	float: left;
+}
+
+.activities .activity-list .activity-item .activity-desc {
+	float: left;
+	font-weight: bold;
+}
+
+.activities .activity-list .activity-item .activity-content {
+	margin-top: -8px;
+}
+
+.activities .activity-list .activity-item .activity-actions {
+	font-size: 10px;
+	margin-top: 5px;
+	border-bottom: 1px solid gray;
+}
+
+
+#task-detail-modal #task-actions-bar {
+	border-left: 2px dashed black;
+}
+
+
+#task-detail-modal #task-actions-bar button {
+	margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
