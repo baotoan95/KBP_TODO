@@ -961,13 +961,13 @@
 		}
 		
 		// Archor action bar
+		var eOffset = $('#task-actions-bar').offset().top;
 		$("#task-detail-modal").scroll(function() {
 			console.log($('#task-actions-bar').scrollTop());
-			if($('#task-actions-bar').offset().top - $('#task-actions-bar').scrollTop() == 0) {
-				console.log('abc');
-				$('#task-actions-bar').css({'position':'fixed', 'top':'0px'});
+			if($(this).scrollTop() > eOffset.top) {
+				$('#task-actions-bar').css({'position':'fixed', 'top':'0'});
 			} else {
-				$('#task-actions-bar').css('position', 'block');
+				$('#task-actions-bar').css('position', 'static');
 			}
 		});
 	});
